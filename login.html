@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PlatePilot Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#0f172a;
+overflow:hidden;
+}
+
+/* Background */
+
+body::before{
+content:'';
+position:absolute;
+width:500px;
+height:500px;
+background:#22c55e;
+border-radius:50%;
+filter:blur(150px);
+left:-200px;
+top:-200px;
+opacity:.3;
+}
+
+body::after{
+content:'';
+position:absolute;
+width:400px;
+height:400px;
+background:#16a34a;
+border-radius:50%;
+filter:blur(150px);
+right:-150px;
+bottom:-150px;
+opacity:.3;
+}
+
+/* Main Card */
+
+.container{
+
+width:1000px;
+height:600px;
+
+background:#1e293b;
+
+border-radius:30px;
+
+overflow:hidden;
+
+display:flex;
+
+box-shadow:
+0px 20px 50px rgba(0,0,0,.4);
+
+z-index:10;
+}
+
+/* Left Section */
+
+.left{
+
+flex:1;
+
+padding:60px;
+
+background:linear-gradient(
+135deg,
+#22c55e,
+#15803d
+);
+
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.logo{
+
+font-size:50px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.subtitle{
+
+font-size:18px;
+opacity:.9;
+margin-bottom:40px;
+}
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.feature-box{
+
+background:rgba(255,255,255,.15);
+
+padding:15px;
+
+border-radius:15px;
+
+backdrop-filter:blur(10px);
+}
+
+.feature-box h4{
+margin-bottom:5px;
+}
+
+/* Right Section */
+
+.right{
+
+flex:1;
+
+padding:60px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-card{
+width:100%;
+}
+
+.login-card h2{
+
+font-size:36px;
+color:white;
+margin-bottom:10px;
+}
+
+.login-card p{
+
+color:#94a3b8;
+margin-bottom:30px;
+}
+
+.input-group{
+margin-bottom:20px;
+}
+
+.input-group label{
+
+display:block;
+color:#e2e8f0;
+margin-bottom:8px;
+}
+
+.input-group input{
+
+width:100%;
+padding:15px;
+
+background:#0f172a;
+
+border:2px solid #334155;
+
+border-radius:12px;
+
+color:white;
+
+font-size:16px;
+}
+
+.input-group input:focus{
+
+outline:none;
+
+border-color:#22c55e;
+}
+
+.options{
+
+display:flex;
+justify-content:space-between;
+
+margin-bottom:25px;
+
+color:#94a3b8;
+
+font-size:14px;
+}
+
+.btn{
+
+width:100%;
+padding:15px;
+border:none;
+
+border-radius:12px;
+
+background:#22c55e;
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+.btn:hover{
+
+background:#16a34a;
+
+transform:translateY(-2px);
+}
+
+.social{
+
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+
+.social button{
+
+flex:1;
+
+padding:12px;
+
+border:none;
+
+border-radius:10px;
+
+font-weight:600;
+
+cursor:pointer;
+}
+
+.google{
+background:white;
+}
+
+.github{
+background:#111827;
+color:white;
+}
+
+.signup{
+
+margin-top:25px;
+
+text-align:center;
+
+color:#94a3b8;
+}
+
+.signup a{
+
+color:#22c55e;
+
+text-decoration:none;
+
+font-weight:600;
+}
+
+.stats{
+
+display:flex;
+
+gap:15px;
+
+margin-top:40px;
+}
+
+.stat{
+
+flex:1;
+
+background:rgba(255,255,255,.15);
+
+padding:15px;
+
+border-radius:15px;
+
+text-align:center;
+}
+
+.stat h3{
+font-size:24px;
+}
+
+@media(max-width:900px){
+
+.container{
+flex-direction:column;
+height:auto;
+width:95%;
+}
+
+.left{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="left">
+
+<div class="logo">
+🥗 PlatePilot
+</div>
+
+<div class="subtitle">
+Affordable Nutrition Planning for Smart Students
+</div>
+
+<div class="features">
+
+<div class="feature-box">
+<h4>💰 Budget Planning</h4>
+<p>Stay within ₹100-150/day</p>
+</div>
+
+<div class="feature-box">
+<h4>🥗 Diet Optimization</h4>
+<p>Balanced nutrition goals</p>
+</div>
+
+<div class="feature-box">
+<h4>🛒 Smart Grocery List</h4>
+<p>Weekly shopping support</p>
+</div>
+
+<div class="feature-box">
+<h4>💪 Protein Tracking</h4>
+<p>Track daily macros</p>
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>10k+</h3>
+<p>Students</p>
+</div>
+
+<div class="stat">
+<h3>95%</h3>
+<p>Accuracy</p>
+</div>
+
+<div class="stat">
+<h3>50+</h3>
+<p>Recipes</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<div class="login-card">
+
+<h2>Welcome Back 👋</h2>
+
+<p>
+Login to generate smart meal plans
+</p>
+
+<form>
+
+<div class="input-group">
+<label>Email Address</label>
+
+<input
+type="email"
+placeholder="student@example.com">
+</div>
+
+<div class="input-group">
+<label>Password</label>
+
+<input
+type="password"
+placeholder="••••••••">
+</div>
+
+<div class="options">
+
+<label>
+<input type="checkbox">
+ Remember Me
+</label>
+
+<span>Forgot Password?</span>
+
+</div>
+
+<button class="btn">
+Generate My Healthy Plan
+</button>
+
+</form>
+
+<div class="social">
+
+<button class="google">
+Google
+</button>
+
+<button class="github">
+GitHub
+</button>
+
+</div>
+
+<div class="signup">
+
+New User?
+<a href="#">
+Create Account
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

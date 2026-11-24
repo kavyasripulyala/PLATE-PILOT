@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlatePilot Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>🥗 PlatePilot</h2>
+
+<a href="dashboard.html">
+<i class="fa-solid fa-chart-line"></i>
+Dashboard
+</a>
+
+<a href="#">
+<i class="fa-solid fa-bowl-food"></i>
+Meal Plans
+</a>
+
+<a href="#">
+<i class="fa-solid fa-cart-shopping"></i>
+Groceries
+</a>
+
+<a href="#">
+<i class="fa-solid fa-chart-pie"></i>
+Analytics
+</a>
+
+<a href="profile.html">
+<i class="fa-solid fa-user"></i>
+Profile
+</a>
+
+<a href="index.html">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+
+<h1>
+👋 Welcome Back Student
+</h1>
+
+<p>
+Today's personalized budget nutrition plan
+</p>
+
+<!-- TOP CARDS -->
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>💰 Daily Budget</h3>
+
+<h2>₹120</h2>
+
+<p>Spent ₹105</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔥 Nutrition Score</h3>
+
+<h2>96%</h2>
+
+<p>Excellent</p>
+
+</div>
+
+<div class="card">
+
+<h3>💪 Protein</h3>
+
+<h2>115g</h2>
+
+<p>Goal: 120g</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔥 Streak</h3>
+
+<h2>12 Days</h2>
+
+<p>Keep Going</p>
+
+</div>
+
+</div>
+
+<!-- NUTRITION SCORE -->
+
+<div class="score-box">
+
+<div class="score-inner">
+
+96%
+
+</div>
+
+</div>
+
+<!-- GENERATE BUTTON -->
+
+<center>
+
+<button
+class="generate-btn"
+onclick="generateMeal()">
+
+✨ Generate New AI Meal Plan ✨
+
+</button>
+
+</center>
+
+<!-- MEALS -->
+
+<h2 style="margin-top:30px;">
+🍽 Today's Meal Plan
+</h2>
+
+<div class="meal-grid">
+
+<div class="meal-card">
+
+<h3>🍳 Breakfast</h3>
+
+<p>Egg Bhurji + Roti</p>
+
+<p>Protein : 22g</p>
+
+<p>Calories : 350</p>
+
+<p>Cost : ₹35</p>
+
+<button>
+Swap Meal
+</button>
+
+</div>
+
+<div class="meal-card">
+
+<h3>🍛 Lunch</h3>
+
+<p>Soya Curry + Rice</p>
+
+<p>Protein : 30g</p>
+
+<p>Calories : 550</p>
+
+<p>Cost : ₹40</p>
+
+<button>
+Swap Meal
+</button>
+
+</div>
+
+<div class="meal-card">
+
+<h3>🥜 Snack</h3>
+
+<p>Roasted Chana + Banana</p>
+
+<p>Protein : 15g</p>
+
+<p>Calories : 250</p>
+
+<p>Cost : ₹20</p>
+
+<button>
+Swap Meal
+</button>
+
+</div>
+
+<div class="meal-card">
+
+<h3>🥣 Dinner</h3>
+
+<p>Dal Khichdi + Curd</p>
+
+<p>Protein : 25g</p>
+
+<p>Calories : 500</p>
+
+<p>Cost : ₹30</p>
+
+<button>
+Swap Meal
+</button>
+
+</div>
+
+</div>
+
+<!-- WATER TRACKER -->
+
+<div class="progress-card">
+
+<h2>
+💧 Water Intake
+</h2>
+
+<p>
+3 Litres / 4 Litres
+</p>
+
+<div class="progress-bar">
+
+<div
+class="progress"
+style="width:75%">
+</div>
+
+</div>
+
+</div>
+
+<!-- GOALS -->
+
+<div class="progress-card">
+
+<h2>
+📈 Today's Progress
+</h2>
+
+<br>
+
+<h4>Protein Goal</h4>
+
+<div class="progress-bar">
+
+<div
+class="progress"
+style="width:90%">
+</div>
+
+</div>
+
+<br>
+
+<h4>Calories Goal</h4>
+
+<div class="progress-bar">
+
+<div
+class="progress"
+style="width:85%">
+</div>
+
+</div>
+
+<br>
+
+<h4>Budget Usage</h4>
+
+<div class="progress-bar">
+
+<div
+class="progress"
+style="width:88%">
+</div>
+
+</div>
+
+</div>
+
+<!-- AFFORDABLE FOODS -->
+
+<div class="grocery-section">
+
+<h2>
+🥗 Recommended Affordable Foods
+</h2>
+
+<ul>
+
+<li>🥚 Eggs - High Protein</li>
+
+<li>🌱 Soya Chunks - Best Protein Per ₹</li>
+
+<li>🥜 Roasted Chana - Cheap Snack</li>
+
+<li>🍌 Banana - Energy Booster</li>
+
+<li>🥛 Milk - Calcium Source</li>
+
+<li>🥣 Moong Dal - Budget Friendly</li>
+
+<li>🍚 Rice - Healthy Carbohydrates</li>
+
+<li>🧀 Paneer - Muscle Gain Food</li>
+
+</ul>
+
+</div>
+
+<!-- GROCERY LIST -->
+
+<div class="grocery-section">
+
+<h2>
+🛒 Weekly Shopping List
+</h2>
+
+<ul>
+
+<li>🥚 Eggs x 30</li>
+
+<li>🍚 Rice 5kg</li>
+
+<li>🥣 Dal 2kg</li>
+
+<li>🌱 Soya Chunks 1kg</li>
+
+<li>🍌 Bananas x 12</li>
+
+<li>🥛 Milk x 7 Litres</li>
+
+<li>🧅 Onions 2kg</li>
+
+<li>🍅 Tomatoes 2kg</li>
+
+</ul>
+
+</div>
+
+<!-- BMI CARD -->
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>📏 BMI</h3>
+
+<h2>22.1</h2>
+
+<p>Normal Weight</p>
+
+</div>
+
+<div class="card">
+
+<h3>💰 Savings</h3>
+
+<h2>₹15</h2>
+
+<p>Today's Savings</p>
+
+</div>
+
+<div class="card">
+
+<h3>⚡ Calories</h3>
+
+<h2>2100</h2>
+
+<p>Daily Intake</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏆 Rank</h3>
+
+<h2>#14</h2>
+
+<p>Campus Leaderboard</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
